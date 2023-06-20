@@ -1,0 +1,13 @@
+/* task.css */
+
+.TO DO .task-span {
+    background-color: blue;
+}
+
+.onprogress .task-span {
+    background-color: green;
+}
+
+.done .task-span {
+    background-color: red;
+}
