@@ -122,7 +122,7 @@ const Hero = () => {
   return (
     <DragDropContext onDragEnd={handleDragEnd}>
       <CenterHeading />
-      <div className="flex sm:flex-col sm:ml-[-78px] sm:flex-start md:flex-col sm:gap-y-4">
+      <div className="flex sm:flex-col md:flex-col sm:ml-[-76px] sm:flex-start sm:gap-y-4 md:gap-y-4">
         <div className="flex flex-col">
           <Columns title="TO DO" tasks={todo} id="1" number="4" />
         </div>
