@@ -76,7 +76,7 @@ const Columns = ({ id, priority, title, type, tasks,number }) => {
                         task={task}
                         index={index}
                       />
-                    </div>
+                    </div>  
                   )}
                 </Draggable>
               ))}

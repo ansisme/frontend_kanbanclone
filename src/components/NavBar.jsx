@@ -41,14 +41,14 @@ const NavBar = () => {
             </div>
           </form>
         </div>
-        <div className='flex md:flex-col sm:ml-[24px]'>
-        <div className="flex mt-[13.5px] ml-[208px] sm:ml-[24px] md:ml-[24px] lg:ml-[0px] mr-[50px] md:mb-[10px]">
+        <div className='flex sm:mt-[-25px] md:flex-col items-center justify-center'>
+        <div className="flex mt-[13.5px] ml-[208px] justify-start md:ml-[24px] lg:ml-[0px] mr-[50px] md:mb-[10px]">
           <img src={calender} alt="calender" className="w-[18px] h-[18.5px] mr-[29px] lg:mr-[15px]" />
           <img src={messageQuestion} alt="message question" className="w-[20px] h-[19.13px] mr-[29px] lg:mr-[15px]" />
           <img src={notification} alt="notification" className="w-[16px] h-[16.87px]" />
         </div>
-        <div className="flex ">
-          <div className="flex flex-col sm:mr-[80px]">
+        <div className="flex items-center">
+          <div className="flex flex-col sm:mr-[40px]">
             <p className="text-[16px] sm:text-[16px]">Anima Agarwal</p>
             <p className="text-[16px] text-lightGrey sm:text-[14px]">U.P, India</p>
           </div>
