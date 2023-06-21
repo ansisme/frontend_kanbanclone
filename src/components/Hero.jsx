@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { DragDropContext } from 'react-beautiful-dnd';
 import Columns from './Columns';
 import taskData from './taskData';
-import './hero.css';
 import CenterHeading from './centerHeading';
 
 const Hero = () => {
@@ -39,20 +38,10 @@ const Hero = () => {
 
     // Add item to destination
     if (destination.droppableId === '1') {
-      setTimeout(()=>{
-        setTodo((prevTodo) => [{ ...task, onprogress: false, done: false }, ...prevTodo]);
-      },100);
-     
-    } else if (destination.droppableId === '2') {
-      setTimeout(() => {
-        setOnprogress((prevOnprogress) => [{ ...task, onprogress: true, done: false }, ...prevOnprogress]);
-      }, 100);
-        } 
-        else {
-          setTimeout(() => {
-            setDone((prevDone) => [{ ...task, onprogress: false, done: true }, ...prevDone]);
-          }, 100);
-        }
+        setTodo((prevTodo) => [{ ...task, onprogress: false, done: false }, ...prevTodo]);}
+    else if (destination.droppableId === '2') {
+        setOnprogress((prevOnprogress) => [{ ...task, onprogress: true, done: false }, ...prevOnprogress]);}
+    else {setDone((prevDone) => [{ ...task, onprogress: false, done: true }, ...prevDone]);}
   };
 
   useEffect(() => {
@@ -74,3 +63,4 @@ const Hero = () => {
   );
 };
 export default Hero;
+

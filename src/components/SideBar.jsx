@@ -1,12 +1,12 @@
 import React from 'react';
-import './sidebar.css';
 import { Icon } from '@iconify/react';
 import Hero from './Hero'
 const SideBar = () => {
   return (
     <>
-    <div className='flex justify-start h-screen '>
-    <div className='flex flex-col overflow-y-scroll h-screen 3xl:mt-[33px] 2xl:mt-[25px] xl:mt-[15px] lg:mt-[0] md:mt-[0] sm:mt-[0] text-lightGrey font-medium sm:ml-[10px] md:ml-[10px] lg:ml-[10px] xl:ml-[15px] 2xl:ml-[20px] 3xl:ml-[22px] mr-[48.5px]'>        
+    <div className='flex h-screen sm:text-[12px]'>
+    <div className='flex flex-col sticky overflow-x-visible overflow-y-scroll h-screen mt-[33px] 2xl:mt-[25px] xl:mt-[15px] lg:mt-[0] md:mt-[0] sm:mt-[0] text-lightGrey font-medium sm:ml-[10px] md:ml-[10px] lg:ml-[10px] xl:ml-[15px] 2xl:ml-[20px] ml-[22px] mr-[85px]'>    
+    <div className='mr-[14px] '>
     <div className='flex items-center pb-[20px]'>
           <Icon icon="uiw:appstore-o" className='mr-2 h-[20px] w-[20px]'/>
           <p className='ml-2 text-[16px] '>Home</p>
@@ -76,7 +76,7 @@ const SideBar = () => {
     <button type='submit' className='text-center'>Write a message</button>
     </div>
     </div>
-   
+    </div>    
     </div>
 </div>
  </div>

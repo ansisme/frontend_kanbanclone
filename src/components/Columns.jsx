@@ -11,7 +11,7 @@ const Columns = ({ id, priority, title, type, tasks,number }) => {
     } else if (title === 'DONE') {
       return 'bg-midGreen';
     } else {
-      return ''; // Default color or class if none of the conditions are met
+      return ''; 
     }
   };
   const getBorderColorClass = () => {
@@ -22,9 +22,16 @@ const Columns = ({ id, priority, title, type, tasks,number }) => {
     } else if (title === 'DONE') {
       return 'border-midGreen';
     } else {
-      return ''; // Default border color class if none of the conditions are met
+      return ''; 
     }
   };
+  const plus=()=>{
+    if(title==='TO DO') {
+      return <div className=' flex bg-opacity-20 bg-blueLine h-[20px] rounded-md w-[20px] flex-center justify-center ml-[187px]'>
+      <p className='text-blueLine text-center mt-[-5px] text-[18px]'>+</p>
+      </div>
+    }
+  }
   return (
     <>
     <div className='flex flex-col'>
@@ -37,6 +44,7 @@ const Columns = ({ id, priority, title, type, tasks,number }) => {
           <span className=' bg-[#E0E0E0]  mt-[3px] h-[20px] w-[20px] rounded-full ml-[12px] '>
             <p className='text-[12px] text-[#625F6D] text-center '>{number}</p>
           </span>
+          {plus()}
         </div>
 
         <div>
