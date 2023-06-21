@@ -5,7 +5,7 @@ const SideBar = () => {
   return (
     <>
     <div className='flex h-screen sm:text-[12px]'>
-    <div className='flex flex-col sticky overflow-x-visible overflow-y-scroll h-screen mt-[33px] 2xl:mt-[25px] xl:mt-[15px] lg:mt-[0] md:mt-[0] sm:mt-[0] text-lightGrey font-medium sm:ml-[10px] md:ml-[10px] lg:ml-[10px] xl:ml-[15px] 2xl:ml-[20px] ml-[22px] mr-[85px]'>    
+    <div className='flex flex-col sticky overflow-y-scroll h-screen mt-[33px] 2xl:mt-[25px] xl:mt-[15px] lg:mt-[0] md:mt-[0] sm:mt-[0] text-lightGrey font-medium sm:ml-[10px] md:ml-[10px] lg:ml-[10px] xl:ml-[15px] 2xl:ml-[20px] ml-[22px] mr-[85px]'>    
     <div className='mr-[14px] '>
     <div className='flex items-center pb-[20px]'>
           <Icon icon="uiw:appstore-o" className='mr-2 h-[20px] w-[20px]'/>
