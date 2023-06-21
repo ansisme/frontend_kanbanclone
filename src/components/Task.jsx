@@ -22,17 +22,7 @@ const Task = ({ priority,task, index }) => {
       return ''; // Default color or class if none of the conditions are met
     }
   };
-  // const heightTasks=()=>{
-  //   if (priority === 'Low') {
-  //     return 'h-[177px]';
-  //   } else if (priority === 'High') {
-  //     return 'h-[258px]';
-  //   } else if (priority === 'Completed') {
-  //     return 'h-[328px]';
-  //   } else {
-  //     return ''; 
-  //   }
-  // }
+
   const widthStyles=()=>{
     if (priority === 'Low') {
       return 'w-[36px]';
@@ -214,11 +204,14 @@ const Task = ({ priority,task, index }) => {
     <Draggable draggableId={task.id} key={task.id} index={index}>
       {(provided, snapshot) => (
         <div
-          className='rounded-2xl bg-white m-[20px]  w-[314px]'
-          {...provided.draggableProps}
-          {...provided.dragHandleProps}
-          ref={provided.innerRef}
-        >
+  className={`rounded-2xl bg-white m-[20px] w-[314px] ${
+    snapshot.isDragging ? 'transform translate-y-[5px] translate-x-[4px]' : ''
+  }`}
+  {...provided.draggableProps}
+  {...provided.dragHandleProps}
+  ref={provided.innerRef}
+>
+
           <div className='p-[20px]'>
           <div className={`${getTaskColorClass()} flex bg-opacity-20 h-[23px] mt-[4px] ${widthStyles()}  rounded-md `}>
             <p className={` pt-[2px] pl-[6px] text-[12px] text-center font-medium  `}>
@@ -228,10 +221,11 @@ const Task = ({ priority,task, index }) => {
             <p className='text-blueBlack font-extrabold'>...</p>
           </div>
           </div>
-          
+          <div>
           <p className={`${tasks()}text-blueBlack text-[18px] pt-[8px] pb-[6px] font-semibold`}>
             {task.title}
           </p>
+          </div>
           <div className='text-lightGrey text-[12px]'>{taskfacilities()}</div>
         </div>
         </div>
